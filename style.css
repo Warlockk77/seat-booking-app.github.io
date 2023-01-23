@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Lato&family=Montserrat&family=Play:wght@400;700&family=Poppins&family=Varela+Round&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box; 
+}
+
+
+body {
+   display: flex;
+   justify-content: center;
+   background:linear-gradient(45deg, rgb(10, 16, 72) 50%, rgb(67, 6, 108) 100%);
+   font-family: 'Montserrat',sans-serif;
+   transition: transform 0.3s ease;
+   
+   
+   
+    
+
+}
+
+.nav {
+    z-index: 2;
+    background:linear-gradient(45deg, rgb(10, 16, 72) 50%, rgb(67, 6, 108) 100%);
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 65vh;
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.show-nav{
+    transform: translateY(65vh);
+}
+
+body.hide-nav{
+    transform:translateY(-65vh) ;
+}
+
+
+
+
+
+
+
+
+
+.firstContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: rgb(173, 173, 173);
+    
+    
+    
+   
+   
+   
+    
+   
+    
+}
+
+.title {
+    font-size:33px;
+    margin-bottom: 50px;
+}
+
+
+
+
+.image {
+    width:25vw;
+    height: 35vw;
+    border-radius: 5px;
+    
+    
+}
+
+.image:hover {
+    cursor: pointer;
+    box-shadow: 0 0 40px rgba(255,255,255,0.2);
+
+}
+
+.p{
+
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+
+
+}
+
+
+.btn {
+    width: 300px;
+    height: 65px;
+    margin-bottom: 50px;
+    font-size: 38px;
+    background-color: transparent;
+    color:rgb(173, 173, 173) ;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    
+}
+
+
+
+
+/* seat book box */
+
+.mainContainer{
+    margin: 20px 0 ;
+    background-color: rgb(140, 139, 202);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    height: 60vh;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(255, 255, 255 ,0.7);
+    color: rgb(230, 230, 230);
+  
+    
+
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.movieContainer select{
+    background-color: rgb(234, 234, 234);
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.hideSelect {
+    display:"none"
+}
+
+.outerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0.125px solid white;
+    width: 25vw;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+.container {
+    perspective: 1000px ;
+    margin-bottom:30px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.seat {
+    background-color: #444451;
+    height: 12px;
+    width:15px;
+    margin: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px ;
+
+}
+.seat.selected {
+
+    background-color: #e8e4f4;
+        
+}
+.seat.booked {
+    background-color: rgb(254, 66, 66) ;
+}
+
+.seat:nth-of-type(2) {
+    margin-right:18px ;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 18px;
+}
+.seat:not(.booked):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+ }
+ .seatShow .seat:not(.booked):hover {
+    cursor: pointer;
+    transform: scale(1);
+ }
+ .seatShow{
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px ;
+    border-radius: 5px;
+    color: rgb(233, 233, 233);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+
+ }
+ 
+ .seatShow li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px; 
+ }
+
+.seatShow li small {
+    margin-left:2px ;
+}
+
+ .row {
+
+    display:flex ; 
+ }
+ .screen {
+    background-color: #fff;
+    height: 70px ;
+    width : 100% ;
+    margin : 15px 0 ;
+    transform:  rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+    text-align: center;
+    color: rgb(228, 228, 228);
+    font-weight: 600;
+    font-size: 30px;
+    
+ }
+
+ 
+
+ p.text {
+    margin:5px 0; 
+    font-weight: 600;
+ }
+
+
+ p.text span {
+    color:#454545 ;
+    font-weight: 600;
+
+ }
+ @media (max-width:600px) {
+
+
+    .mainContainer{
+     width:90vw
+     
+    }
+    .seat {
+        width:18px;
+        height:15px;
+        
+       }
+    .outerbox {
+        width:85vw
+       }
+    .screen {
+         
+        width:78vw
+       }
+    .movieContainer select{
+        width:150px;
+       }
+    }
+
+
+     
+    
+    
+   
+    
+   
+
+
+
+
+
+
+
+
+
+
+
